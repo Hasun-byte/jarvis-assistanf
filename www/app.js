@@ -815,7 +815,7 @@ Jangan pernah menulis apapun di luar objek JSON tersebut.`;
     const data = await res.json();
     return ((_c = (_b = (_a = data.choices) == null ? void 0 : _a[0]) == null ? void 0 : _b.message) == null ? void 0 : _c.content) || '{"reply":"Maaf, saya tidak mendapat balasan.","action":null}';
   }
-  var GEMINI_MODEL = "gemini-2.5-flash";
+  var GEMINI_MODEL = "gemini-3.5-flash-lite";
   async function callGemini(userText) {
     var _a, _b, _c, _d;
     const url = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${settings.apiKey}`;
