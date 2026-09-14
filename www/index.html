@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>Jarvis Assistant</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <div class="brand">
+        <div class="orb" id="orb"></div>
+        <div>
+          <h1>JARVIS</h1>
+          <p id="status">Siap membantu</p>
+        </div>
+      </div>
+      <button id="settingsBtn" title="Pengaturan">⚙</button>
+    </header>
+
+    <main id="chat"></main>
+
+    <footer>
+      <button id="micBtn" class="mic">🎤</button>
+      <input id="textInput" type="text" placeholder="Ketik perintah..." />
+      <button id="sendBtn">➤</button>
+    </footer>
+  </div>
+
+  <!-- Settings Modal -->
+  <div id="settingsModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Pengaturan</h2>
+
+      <label>Penyedia AI</label>
+      <select id="providerSelect">
+        <option value="anthropic">Claude (Anthropic)</option>
+        <option value="openai">OpenAI (ChatGPT)</option>
+        <option value="gemini">Gemini (Google AI)</option>
+      </select>
+
+      <label>API Key</label>
+      <input id="apiKeyInput" type="password" placeholder="Masukkan API key Anda" />
+      <p class="hint">API key disimpan hanya di perangkat ini (localStorage), tidak dikirim ke server manapun selain penyedia AI yang dipilih.</p>
+
+      <label>
+        <input type="checkbox" id="autoSpeak" checked />
+        Bacakan balasan otomatis (TTS)
+      </label>
+
+      <div class="perm-section">
+        <h3>Izin Perangkat</h3>
+        <button id="grantNotifBtn" class="secondary">Buka Akses Notifikasi</button>
+        <button id="grantOverlayBtn" class="secondary">Izinkan Muncul di Atas Aplikasi</button>
+      </div>
+
+      <div class="modal-actions">
+        <button id="closeSettings">Simpan & Tutup</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "appId": "com.example.jarvis",
+  "appName": "Jarvis Assistant",
+  "webDir": "www",
+  "backgroundColor": "#0a0e14",
+  "android": {
+    "allowMixedContent": true
+  }
+}
