@@ -123,7 +123,7 @@ async function callOpenAI(userText) {
   return data.choices?.[0]?.message?.content || '{"reply":"Maaf, saya tidak mendapat balasan.","action":null}';
 }
 
-const GEMINI_MODEL = 'gemini-2.5-flash';
+const GEMINI_MODEL = 'gemini-3.5-flash-lite';
 
 async function callGemini(userText) {
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${settings.apiKey}`;
